@@ -1,0 +1,646 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <!--[if IE 7]> <html class="no-js ie7 ie" lang="en"> <![endif]-->
+    <!--[if IE 8]> <html class="no-js ie8 ie" lang="en"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="" lang="en"> <!--<![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Define the Campaign and Sender | Campaign Monitor</title>
+    
+    
+
+<script type="text/javascript">
+    !function () {
+        window.AppcuesSettings = {skipAMD: true};
+        var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var o = document.getElementsByTagName("script")[0]; o.parentNode.insertBefore(n, o); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
+            
+                var browserWidth = window.innerWidth || document.body.clientWidth;
+                analytics.load('IYUcXJEV4x6ZH69I8ENPoxkZJ3fy1LQj', { integrations: {"Appcues":false,"FullStory":false,"Hotjar":false,"Intercom":false,"Amplitude":{"session_id":1569469339}} });
+                analytics.identify('0F8C96E86323F7F9-0BDCD4444ED71634-1FC6DD32EEBD402F-8798081EC630A05C4D5F7987FD409C12-1247ABD8E502E78E',
+                    { 'Browser Width': browserWidth, 'AppCues Notifications': 'None', "Experiments":["ThirdPartyImageUrl","CanvasDontConvertLink"],"Experiment Variations":["ThirdPartyImageUrl_A","CanvasDontConvertLink_A"],"Experiments String":"ThirdPartyImageUrl, CanvasDontConvertLink","Experiment Variations String":"ThirdPartyImageUrl_A, CanvasDontConvertLink_A"},
+                    { integrations: {"Appcues":false,"FullStory":false,"Hotjar":false,"Intercom":false,"Amplitude":{"session_id":1569469339}} });
+
+                window.publishUpsellPageView = function (pageName) {
+                    var publish = window.analytics;
+
+                    if (publish) {
+                        publish.page('Account, Security And Billing', pageName, {}, { integrations: {"Appcues":false,"FullStory":false,"Hotjar":false,"Intercom":false,"Amplitude":{"session_id":1569469339}} });
+                    }
+                };
+analytics.page('Campaigns', 'Campaigns - Define Email Details', {}, { integrations: {"Appcues":false,"FullStory":false,"Hotjar":false,"Intercom":false,"Amplitude":{"session_id":1569469339}} });
+        }
+    }();
+</script>
+	  
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<link rel="shortcut icon" href="http&#58;&#47;&#47;img.localcreatesend.com/favicon.ico?3" />
+<link href="http://css.localcreatesend.com/css/cmds/cmds-global.min.css?h=9303445820190522" media="screen,projection" rel="stylesheet" type="text/css" />
+<link href="http://css.localcreatesend.com/css/global-old-setup.min.css?h=834B67C420190522" media="screen,projection" rel="stylesheet" type="text/css" />
+<link href="http://css.localcreatesend.com/css/global-new-setup.min.css?h=0DE338CB20190522" media="screen,projection" rel="stylesheet" type="text/css" />
+<link href="http://css.localcreatesend.com/css/cmds/cmds-components.min.css?h=4643E32520190522" media="screen,projection" rel="stylesheet" type="text/css" />
+<link href="http://css.localcreatesend.com/css/global-header.min.css?h=0290D7DE20190522" media="screen,projection" rel="stylesheet" type="text/css" />
+<link href="http://css.localcreatesend.com/css/print.min.css?h=74660BF320190522" media="print" rel="stylesheet" type="text/css" />
+<link href="http://css.localcreatesend.com/css/cm-blue.min.css?h=C080BF3D20190522" media="screen,projection" rel="stylesheet" type="text/css" />
+
+<link rel="apple-touch-icon-precomposed" href="http&#58;&#47;&#47;img.localcreatesend.com/mobile_themes/cs/img/iOS-120.png" />
+
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/compiled/vendor/react@16.9.0/umd/react.production.min.js?h=C31D8DE220190522"></script>
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/compiled/vendor/react@dom-16.9.0/umd/react-dom.production.min.js?h=3C4AA61C20190522"></script>
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/compiled/vendor/sentry@4.2.4/bundle.min.js?h=6FD725ED20190522"></script>
+    
+    <link href="http://css.localcreatesend.com/css/createsend.min.css?h=B557FDC120190522" media="screen,projection" rel="stylesheet" type="text/css" />
+
+    <script type='text/javascript'>window.q = []; window.$ = function (f) { q.push(f) }</script>
+    <link rel="stylesheet" href="auto-complete.css">
+</head>
+<body 
+>
+    <script data-userId="1-996520" data-sessionId="1|357078|128826|0|09260342193001" data-apiKey="bcfcb97ecb" src="http://js.localcreatesend.com/js/sift/SiftTracking1.0.1.js?h=534BEA7620190522" type="text/javascript"></script>
+    
+    
+<!-- Google Tag Manager -->
+
+
+<script type="text/javascript" src="http://js.localcreatesend.com/js/cm-gtm.min.js?h=6D2AA99F20190522"></script>
+
+<script>
+    CS.GoogleTagManager.init();
+</script>
+
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-P82FBF');
+</script>
+<!-- End Google Tag Manager -->
+
+
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/compiled/app/global/sessiontimeout/sessionTimeoutDetector.min.js?h=978104A020190522"></script>
+
+
+    <div class="c-modal-dialog-underneath  js-modal-dialog-underneath" aria-hidden="false">
+        
+        
+
+
+
+
+
+<svg xmlns="https://www.w3.org/2000/svg" version="1.1" style="display: none;">
+  <symbol id="drop-down-trigger-arrow" viewBox="0 0 7 4">
+    <polygon points="3.5,0 0,4 7,4"/>
+  </symbol>
+  <symbol id="drop-down-menu-arrow" viewBox="0 0 12 6">
+    <polygon points="6 0 12 6 0 6"/>
+  </symbol>
+  <symbol id="nav-main-breadcrumb-arrow" viewBox="0 0 5 8">
+    <path d="M2.6,4L0.3,1.7c-0.4-0.4-0.4-1,0-1.4C0.5,0.1,0.7,0,1,0c0.3,0,0.5,0.1,0.7,0.3l3,3c0.4,0.4,0.4,1,0,1.4l-3,3c-0.4,0.4-1,0.4-1.4,0c-0.4-0.4-0.4-1,0-1.4L2.6,4"/>
+  </symbol>
+  <symbol id="blank-slate-arrow" viewBox="-286 392 38 9">
+     <path d="M-257.4 392l.9 3.9c-11-2-19.8-.5-29.4 1.6l.6 2.1c9.7-2 19.2-3.4 28.9-1.4l-2.3 2.9 10.8-2.9-9.5-6.2z" />
+  </symbol>
+</svg>
+
+
+<header class="c-site-header  c-site-header--agency c-site-header--agency-client c-site-header--agency-with-sitename  stacking-context-header  js-site-header  qa-site-header  c-site-header--theme-purple" role="banner">
+
+
+  
+  
+    <div class="c-site-header__agency-admin" style="background-color: #19a9e5;">
+
+      <!-- Inner container -->
+      <div class="c-site-header__inner  l-container">
+
+        <!-- Side-by-side layout module -->
+        <div class="cmds-grid cmds-grid--fluid cmds-grid--wrap cmds-grid--h-space-between">
+
+          <!-- Left side: Branding and main navigation -->
+          <div class="cmds-grid__item">
+
+            <!-- Nested side-by-side layout module -->
+            <div class="cmds-grid cmds-grid--wrap">
+
+              <!-- Branding -->
+              <div class="cmds-grid__item">
+                <a aria-label="home" href="/admin/" class="c-site-header__logo" rel="home">
+                  
+                    <!-- Site name -->
+                    <strong class="c-site-header__logo__site-name qa-site-header-site-name">Campaign Monitor</strong>
+                    <!-- //Site name -->
+                  
+                </a>
+              </div>
+              <!-- //Branding -->
+
+              <!-- Main navigation and Client Switcher -->
+              
+                <div class="cmds-grid__item">
+                  <nav role="navigation">
+                    <ul class="c-site-header__nav-main">
+                      
+                        <li>
+                          <a class="c-site-header__nav-main__link  qa-nav-main-link-clients" href="/admin/clients/" rel="home">
+                          Clients
+                          <svg class="c-site-header__nav-main__arrow" aria-hidden="true">
+                            <use xlink:href="#nav-main-breadcrumb-arrow" />
+                          </svg>
+                          </a>
+                        </li><li>
+                          
+                            <!-- Client switcher drop down menu -->
+                            <div class="o-drop-down u-drop-down   js-menu-button" data-list-url="/nav/clients/A5F60A307B5EE51310731DAF46F005B3EAE9972C73563A8B/False">
+
+                              <!-- Client switcher drop down menu trigger -->
+                              <a href="#menu-button-target-1" class="c-site-header__nav-main__link c-site-header__nav-main__link--menu-button  o-drop-down__trigger u-drop-down__trigger  js-menu-button-trigger qa-menu-button-client" aria-haspopup="true">
+                                <span class="js-client-name">new timl test2</span>
+                                <span class="u-hide-visually  u-hide-if-js-is-off">
+                                  Open the client list menu with the enter key and close it with the escape key; use the up and down arrow keys to navigate.
+                                </span>
+                                <svg class="c-site-header__menu-button__arrow  u-hide-if-js-is-off" aria-hidden="true">
+                                  <use xlink:href="#drop-down-trigger-arrow" />
+                                </svg>
+                              </a>
+                              <!-- //Client switcher drop down menu trigger -->
+
+                              <!-- Client switcher drop down menu target -->
+                              <div class="c-drop-down-menu  o-drop-down__target u-drop-down__target u-hide-if-js-is-off  js-menu-button-target" id="menu-button-target-1">
+                                
+                                
+                                <ul class="c-drop-down-menu__list  js-menu-button-filter-results"></ul>
+                                <span class="c-drop-down-menu__arrow" aria-hidden="true">
+                                  <svg class="c-drop-down-menu__arrow-svg">
+                                    <use xlink:href="#drop-down-menu-arrow" />
+                                  </svg>
+                                  <span class="c-drop-down-menu__arrow-svg-overlap"></span>
+                                </span>
+                              </div>
+                              <!-- //Client switcher drop down menu target -->
+
+                            </div>
+                            <!-- //Client switcher drop down menu -->
+                          
+                        </li>
+                      
+                    </ul>
+                  </nav>
+                </div>
+                <!-- //Main navigation and Client Switcher -->
+              
+
+            </div>
+            <!-- //Nested side-by-side layout module -->
+
+          </div>
+          <!-- //Left side: Branding and main navigation -->
+
+          <!-- Right side: Avatar drop down menu -->
+          <nav class="cmds-grid__item u-text-align-right" role="navigation" aria-label="My Account navigation">
+            <ul class="c-site-header__utilities">
+            <li>
+               <a class="c-site-header__menu-button c-site-header__nav-main__link  qa-drop-down-menu-list-link-help" href="/help-doc/campus-home" target="_blank" rel="noopener" style="padding-top: 34px; font-size:1rem">Help</a>
+            </li>
+            <li>
+            <div class="o-drop-down u-drop-down  js-menu-button">
+
+              <!-- Avatar drop down menu trigger -->
+              <a href="#menu-button-target-2" class="c-site-header__menu-button c-site-header__menu-button--last  o-drop-down__trigger u-drop-down__trigger  js-menu-button-trigger qa-menu-button-account" aria-haspopup="true">
+                <span class="cmds-grid c-header-profile">
+                  <span class="cmds-grid__item c-header-profile__name">
+                    <strong class="c-site-header__menu-button__label">jie liu</strong>
+                  </span>
+                  <span class="cmds-grid__item">
+                    <span class="c-site-header__menu-button__avatar c-avatar">
+                      <img src="https&#58;&#47;&#47;secure.gravatar.com&#47;avatar&#47;7f6cf6857bf2735a64999febc28ff91c&#63;d&#61;https&#37;3A&#37;2F&#37;2Fimg.createsend.com&#37;2Fimg&#37;2F_new-setup&#37;2Favatars&#37;2Favatar-30x30-2x.png&#38;s&#61;60" alt="Avatar of jie liu" width="30" height="30">
+                    </span>
+                  </span>
+                </span>
+                <span class="u-hide-visually">Open the sub menu with the enter key and close it with the escape key; use the up and down arrow keys to navigate.</span>
+                <svg class="c-site-header__menu-button__arrow" aria-hidden="true">
+                  <use xlink:href="#drop-down-trigger-arrow" />
+                </svg>
+              </a>
+              <!-- //Avatar drop down menu trigger -->
+
+              <!-- Avatar drop down menu target -->
+              <div class="c-drop-down-menu c-drop-down-menu--narrow-width  o-drop-down__target o-drop-down__target--right u-drop-down__target u-drop-down__target--right  js-menu-button-target" id="menu-button-target-2">
+                <ul class="c-drop-down-menu__list">
+                  
+                    <li class="c-drop-down-menu__list-item"><a class="c-drop-down-menu__link  qa-drop-down-menu-list-link-settings" href="/admin/account/">Account settings</a></li>
+                    <li class="c-drop-down-menu__list-item"><a class="c-drop-down-menu__link  qa-drop-down-menu-list-link-billing" href="/admin/billing/">Billing</a></li>
+                    <li class="c-drop-down-menu__list-item c-drop-down-menu__list-divider"><a class="c-drop-down-menu__link  qa-drop-down-menu-list-link-customize" href="/admin/customize/">Customize</a></li>
+                    <li class="c-drop-down-menu__list-item c-drop-down-menu__list-divider"><a class="c-drop-down-menu__link  qa-drop-down-menu-list-link-clients" href="/admin/clients/" rel="home">Manage clients</a></li>
+                  
+                  <li class="c-drop-down-menu__list-item">
+                    <a class="c-drop-down-menu__link  qa-drop-down-menu-list-link-help" href="/help-doc/campus-home" target="_blank" rel="noopener" >Help</a>
+                  </li>
+                  <li class="c-drop-down-menu__list-item">
+                    <a class="c-drop-down-menu__link qa-drop-down-menu-list-link-logout" href="/logout.aspx">Log out</a>
+                  </li>
+                  <li class="c-drop-down-menu__list-item  u-hide-if-js-is-on">
+                    <a href="#" class="c-drop-down-menu__link">[X] close menu</a>
+                  </li>
+                </ul>
+                <span class="c-drop-down-menu__arrow c-drop-down-menu__arrow--right" aria-hidden="true">
+                  <svg class="c-drop-down-menu__arrow-svg">
+                    <use xlink:href="#drop-down-menu-arrow" />
+                  </svg>
+                  <span class="c-drop-down-menu__arrow-svg-overlap"></span>
+                </span>
+              </div>
+              <!-- //Avatar drop down menu target -->
+
+            </div>
+            <!-- //Avatar drop down menu -->
+            </li>
+            </ul>
+          </nav>
+          <!-- //Right side: Avatar drop down menu -->
+        </div>
+        <!-- //Side-by-side layout module -->
+
+      </div>
+      <!-- //Inner container -->
+
+    </div>
+  
+    <div class="c-site-header__direct-agency-client c-site-header__agency-client">
+
+      <!-- Inner container -->
+      <div class="c-site-header__inner  l-container">
+
+        <!-- Side-by-side layout module -->
+        <div class="c-site-header__inner__offset cmds-grid cmds-grid--wrap cmds-grid--h-space-between cmds-grid--fluid">
+
+          <!-- Left side: CM logo and main navigation -->
+          <div class="cmds-grid__item">
+
+            <!-- Nested side-by-side layout module -->
+            <div class="cmds-grid">
+
+              <!-- CM logo -->
+              
+              <!-- //CM logo -->
+
+              <!-- Main navigation -->
+              <div class="cmds-grid__item">
+                <nav role="navigation" aria-label="Main navigation">
+                  <ul class="c-site-header__nav-main">
+                    
+                        <li>
+                            <a class="c-site-header__nav-main__link  qa-nav-main-link-overview js-overview-menu" href="/">Overview</a>
+                            
+                        </li>
+                    <!--
+                    --><li><a class="c-site-header__nav-main__link is-active qa-nav-main-link-campaigns" href="/campaigns">Campaigns</a></li><!--
+                    --><li><a class="c-site-header__nav-main__link  qa-nav-main-link-automation" href="/automation/1fc6dd32eebd402f">Automation</a></li><!--
+                    --><li><a class="c-site-header__nav-main__link  qa-nav-main-link-transactional" href="/triggered/campaigns/1FC6DD32EEBD402F">Transactional</a></li><!--
+                    --><li><a class="c-site-header__nav-main__link  qa-nav-main-link-lists-and-subscriber" href="/subscribers/">Lists &amp; subscribers</a></li><!--
+                    --><li><a class="c-site-header__nav-main__link qa-nav-main-link-insights" href="/insights/1FC6DD32EEBD402F/">Insights</a></li><!--
+                    --><li><a class="c-site-header__nav-main__link  qa-nav-main-link-integrations" href="/integrations/">App store</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- //Main navigation -->
+
+            </div>
+          </div>
+          <!-- //Left side: CM logo and main navigation -->
+
+          <!-- Right side: Avatar drop down menu and Templates and Client settings links -->
+          
+            <nav class="cmds-grid__item u-text-align-right" role="navigation" aria-label="Sub navigation">
+
+              <!-- "Buy Now/Free Trial" button and Avatar drop down menu -->
+              
+              <!-- //"Buy Now/Free Trial" button and Avatar drop down menu -->
+
+              <!-- Templates and Client settings links -->
+              
+                <ul class="c-site-header__nav-main">
+                  <li><a class="c-site-header__nav-main__link  qa-drop-down-menu-list-link-templates" href="/templates">My templates</a></li><li><a class="c-site-header__nav-main__link  qa-drop-down-menu-list-link-client-settings" href="/admin/client/settings/1FC6DD32EEBD402F">Client settings</a></li>
+                </ul>
+              
+              <!-- //Templates and Client settings links -->
+
+            </nav>
+          
+          <!-- //Right side: Avatar drop down menu and Templates and Client settings links -->
+
+        </div>
+        <!-- //Side-by-side layout module -->
+
+      </div>
+      <!-- //Inner container -->
+
+    </div>
+  
+  
+
+
+</header>
+
+
+
+            <div class="stacking-context-main  js-site-main-content">
+                
+
+
+
+<div class="bar-top bar-top--with-btm-margin">
+    <div class="wrap content">
+
+
+        <h1 class="step1">Define the campaign and sender details <span id="campaignName">Choose from two campaign types</span></h1>
+
+            <div class="camp-prog">
+                <div id="regIcons" class="camp-prog-cp1" style="display: block"></div>
+                <div id="sfIcons" class="camp-prog-sf1" style="display: none"></div>
+                <div id="coIcons" class="camp-prog-co1" style="display:none"></div>
+                <div id="trIcons" class="camp-prog-tr1" style="display: none"></div>
+            </div>
+            <ul class="nav-with-icons two" style=>
+                <li id="regular-tab" class="qa-campaign-button current">
+                    <button class="icon-nav-regular cmds-button qa-button-navigation-regular-campaign">
+                        <span class="text">Regular</span>
+                    </button>
+                </li>
+                <li id="absplit-tab" class="qa-ab-split-button ">
+                    <button class="icon-nav-split cmds-button qa-button-navigation-ab-campaign">
+                        <span class="text">A/B test</span>
+                    </button>
+                </li>
+            </ul>
+
+    </div>
+</div>
+
+<div class="wrap content">
+    <div class="primary-form-wrap">
+        
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="regular">
+        <div id="campaign-editor">
+<form Id="regular-form" action="/campaigns/regular/step1" method="post" tab="regular,absplit">	<div id="regular-content" style="">
+
+		<ul class="primary-form">
+
+			<li id="ab-directive" style="display: none;)">
+				<label>Test two versions of...</label>
+				<div class="radio-group width-fixed">
+	<label><input checked="checked" id="radioSubject" name="AbTestVariation" type="radio" value="1" /> Subject line
+	<span class="helper-text">Try two different subject lines to see which has the best open rate.</span>
+	</label>
+
+	<label><input id="radioFrom" name="AbTestVariation" type="radio" value="3" /> From name
+	<span class="helper-text">Are you using the best From name for your campaigns? Test to find out for sure.</span>
+	</label>
+
+	<label><input id="radioContent" name="AbTestVariation" type="radio" value="2" /> Email content
+	<span class="helper-text">Make one small change, or test two completely different versions of your email content.</span>
+	</label>
+</div>
+
+			</li>
+
+		    <li>
+		        <label for="Name">Name this campaign</label>
+		        <div class="helper-text">The campaign name is shown in your reports and your email archive.</div>
+		        <div class="box-wrap">
+		            <input autofocus="autofocus" class="&#32;name-field&#32;width-full&#32;first" id="Name" name="Name" type="text" value="" /> 
+		        </div>
+		    </li>
+
+			<li id="regSubject" style="">
+				<label for="Subject">Write a subject line</label>
+				<div class="helper-text">
+						The subject of your last campaign was: <strong>Free Donut if your name is [see list] from Goldeluck&#39;s Doughnuts on Saturday 1st June! [Eastland, Croydon and Patterson Lake]...</strong>.
+				</div>
+				<div class="box-wrap">
+		      		<input class="&#32;subject-field&#32;with-inside-input&#32;first" id="Subject" name="Subject" type="text" value="" />
+                    <label class="cmds-g-visuallyhidden" for="personalize">Personalize subject line</label>
+					<select name="personalize" id="personalize" class="inside-input">
+						<option selected="selected" disabled="disabled" value="">Insert personalization</option>
+						<option value="[firstname,fallback=customer]">Insert first name</option>
+						<option value="[lastname,fallback=customer]">Insert last name</option>
+						<option value="[fullname,fallback=customer]">Insert full name</option>
+					</select>
+				</div>
+			</li>
+
+			<li id="abSubject" style="display: none;">
+				<div class="label-title">Write a subject line for versions A and B</div>
+				<div class="helper-text">
+						One of these is what will appear in the Subject field in your recipient's email client.
+				</div>
+				<div class="box-wrap multiple">
+					<div class="row">
+                        <label class="cmds-g-visuallyhidden" for="CampaignA_Subject">Subject line for version A</label>
+						<input class="&#32;with-inside-input&#32;first" id="CampaignA_Subject" name="CampaignA.Subject" type="text" value="" />
+                        <label class="cmds-g-visuallyhidden" for="personalizeA">Personalize subject line for version A</label>
+						<select name="personalizeA" id="personalizeA" class="inside-input">
+							<option selected="selected" disabled="disabled" value="">Insert personalization</option>
+							<option value="[firstname,fallback=customer]">Insert first name</option>
+							<option value="[lastname,fallback=customer]">Insert last name</option>
+							<option value="[fullname,fallback=customer]">Insert full name</option>
+						</select>
+			            <div class="abtest-a">A</div>
+			        </div>
+			        <div class="row">
+                        <label class="cmds-g-visuallyhidden" for="CampaignB_Subject">Subject line for version B</label>
+						<input class="&#32;with-inside-input&#32;first" id="CampaignB_Subject" name="CampaignB.Subject" type="text" value="" />
+                        <label class="cmds-g-visuallyhidden" for="personalizeB">Personalize subject line for version B</label>
+						<select name="personalizeB" id="personalizeB" class="inside-input">
+							<option selected="selected" disabled="disabled" value="">Insert personalization</option>
+							<option value="[firstname,fallback=customer]">Insert first name</option>
+							<option value="[lastname,fallback=customer]">Insert last name</option>
+							<option value="[fullname,fallback=customer]">Insert full name</option>
+						</select>
+			            <div class="abtest-b">B</div>
+			        </div>
+				</div>
+			</li>
+
+            <li id="regFrom" style="">
+                <label>Who is it from?</label>
+                <div class="helper-text">
+                    This will display in the From field.
+                        <span>You can use </span>
+                        <span class="replyToNotification"><a id="showReplyTo" href="#">a different reply-to address</a> and</span>
+                        <span><a href="/help-doc/campus-dynamic-from-name-and-address" target="_blank" rel="noopener" title="Learn more">personalized From details</a>.</span>
+                </div>
+                <div class="box-wrap">
+                    <label class="cmds-g-visuallyhidden" for="FromName">Sender’s name</label>
+                    <input class="&#32;fromname-field&#32;width-half&#32;first" id="FromName" name="FromName" placeholder="Name" type="text" value="jie&#32;liu" />
+                    <label class="cmds-g-visuallyhidden" for="fromEmail">Sender’s email address</label>
+<input class="unauthenticatedDomain&#32;&#32;fromemail-field&#32;width-half" id="fromEmail" name="FromEmail.EmailAddress" placeholder="Email" placeholdertext="Email" type="text" value="timl@campaignmonitor.com" />                    <span class="warning-text js-freeWebmailWarning" style="display: none;">Sending a campaign from a free email address may cause your email to be blocked as spam. <a href="/help-doc/campus-from-name-and-address" rel="noopener" target="_blank">Learn why</a></span>
+                    <span class="warning-text js-emailAuthWarning" style="display:none">You haven't set up authentication. Sending from an unauthenticated domain can reduce your chances of reaching the inbox. <a href="/help-doc/campus-non-authenticated" rel="noopener" target="_blank">Learn more</a></span>
+
+                </div>
+            </li>
+
+		    <li id="abFrom" style="display: none;">
+				<div class="label-title">Enter sender details for versions A and B</div>
+                <div class="helper-text">
+                    This will display in the From field.
+                        <span>You can use </span>
+                        <span class="replyToNotification"><a id="showReplyToAB" href="#">a different reply-to address</a> and</span>
+                        <span><a href="/help-doc/campus-dynamic-from-name-and-address" target="_blank" rel="noopener" title="Learn more">personalized From details</a>.</span>
+                </div>
+				<div class="box-wrap multiple">
+					<div class="row">
+                        <label class="cmds-g-visuallyhidden" for="CampaignA_FromName">Sender name for version A</label>
+						<input class="width-half&#32;first" id="CampaignA_FromName" name="CampaignA.FromName" placeholder="Name&#32;A" type="text" value="test&#32;1" />
+
+                        <label class="cmds-g-visuallyhidden" for="fromEmailA">Sender email address for version A</label>
+<input class="unauthenticatedDomain&#32;&#32;fromemail-field&#32;width-half" id="fromEmailA" name="CampaignA.FromEmail.EmailAddress" placeholder="Email&#32;A" placeholdertext="Email&#32;A" type="text" value="test@deploycmailtest.com" />			            <div class="abtest-a">A</div>
+			        </div>
+				    <div class="row">
+                        <label class="cmds-g-visuallyhidden" for="CampaignB_FromName">Sender name for version B</label>
+				        <input class="&#32;width-half&#32;first" id="CampaignB_FromName" name="CampaignB.FromName" placeholder="Name&#32;B" type="text" value="test&#32;2" />
+
+                        <label class="cmds-g-visuallyhidden" for="fromEmailB">Sender email address for version B</label>
+<input class="unauthenticatedDomain&#32;&#32;fromemail-field&#32;width-half" id="fromEmailB" name="CampaignB.FromEmail.EmailAddress" placeholder="Email&#32;B" placeholdertext="Email&#32;B" type="text" value="test@deploycmailtest2.com" />				        <div class="abtest-b">B</div>
+				        <span class="warning-text js-freeWebmailWarning" style="display: none;">Sending a campaign from a free email address may cause your email to be blocked as spam. <a href="/help-doc/campus-from-name-and-address" rel="noopener" target="_blank">Learn why</a></span>
+				        <span class="warning-text js-emailAuthWarning" style="display:none">You haven't set up authentication. Sending from an unauthenticated domain can reduce your chances of reaching the inbox. <a href="/help-doc/campus-non-authenticated" rel="noopener" target="_blank">Learn more</a></span>
+				    </div>
+				</div>
+			</li>
+
+			<li id="replyToContainer">
+				<label for="ReplyTo">Replies should be sent to</label>
+				<div class="helper-text">Enter a valid email address that replies will be sent to.</div>
+				<div class="box-wrap">
+					<input class="replyto-field&#32;width-full&#32;first&#32;" id="ReplyTo" name="ReplyTo" placeholder="sally@me.com" placeholdertext="sally@me.com" type="text" value="timl@campaignmonitor.com" />
+				</div>
+			</li>
+
+			<input id="CampaignType" name="CampaignType" type="hidden" value="regular" />
+			<input id="FromEmailAddressSameAsReplyToAddress" name="FromEmailAddressSameAsReplyToAddress" type="hidden" value="True" />
+            <input id="IsTransactional" name="IsTransactional" type="hidden" value="False" />
+            <input id="CampaignsHideStep1AuthWarning" name="CampaignsHideStep1AuthWarning" type="hidden" value="True" />
+
+			<li aria-hidden="true">
+				<input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+			</li>
+
+		</ul>
+
+	</div>
+</form>
+
+            <div class="primary-form padding-none">
+                <div id="submit-wrap" class="button-cancel wizard" style="">
+
+                        <div id="submitButtonContainer">
+                            <span class="cancel freeWebmailInfo js-freeWebmailInfo" style="display: none">
+                                If you proceed, some recipients may not receive this campaign. We recommend using your own domain instead.<br />
+                                <i>e.g. you@yourcompany.com</i>
+                            </span>
+                            <span class="cancel emailAuthInfo js-emailAuthInfo" style="display: none">
+                                Authentication is recommended by major email providers like Gmail and Yahoo to improve your chance of delivery. <br />
+                                    <span>Do you want to set up an authenticated domain?</span>
+                            </span>
+                            <button id="submitButton" class="js-noAuthWarnSubmitButton cmds-button cmds-button--primary cmds-button--bridge qa-button-next-step">
+                                <span class="cmds-button__inner">
+                                    <span class="cmds-button__text">Next</span>
+                                    <svg aria-hidden="true" class="cmds-icon cmds-icon--size-16" fill="currentColor" viewBox="0 0 14 12">
+                                        <path d="M8.59 0L7.212 1.38 10.666 5H1.003C.45 5 0 5.444 0 6c0 .552.445 1 1.003 1h9.663l-3.454 3.622L8.59 12l5.17-5.42c.32-.336.32-.823 0-1.158L8.59 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <span class="cancel js-freeWebmailInfo" style="display: none" >or <a id="changeFromAddress">Change from address</a></span>
+                            <span class="js-emailAuthInfo" style="display: none">
+                                    <a class="button primary huge qa-button-setup-authentication" href="/admin/client/authentication/1fc6dd32eebd402f">Set up authentication</a>
+                                    <span class="cancel">or <button id="authSubmitButton" class="qa-button-continue-without-authentication button Secondary huge forward cancel">Continue without it</button></span>
+                            </span>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+    </div>
+
+    
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/jquery-1.7.2.min.js?h=C99A465920190522"></script>
+    <script async type="text/javascript" id="mini-profiler" src="/mini-profiler-resources/includes.js?v=xzh7eivxXApAgO8DQxxtlBYUiNtZLU6N3nlMcvyG9UM=" data-version="xzh7eivxXApAgO8DQxxtlBYUiNtZLU6N3nlMcvyG9UM=" data-path="/mini-profiler-resources/" data-current-id="6368dc3c-0392-492d-92b1-32142fa6f9be" data-ids="3a633c0f-2f4b-467b-bc47-b1b5b25d0f1b,ea888ca2-c31a-49c4-bff6-76e98f050d6c,2125bc19-0da4-480d-b0ee-79b74263f9db,7c73d459-a6da-4aaa-96b9-981a6eacccb8,92a52626-2f08-42a6-85cb-57636e9a7632,cbef8235-0341-48eb-aae2-3fd3b23fe945,43225d54-80ad-4bf6-aedf-99caaaa9535b,6368dc3c-0392-492d-92b1-32142fa6f9be" data-position="left" data-trivial="false" data-children="false" data-max-traces="15" data-controls="false" data-authorized="true" data-toggle-shortcut="Alt+P" data-start-hidden="false" data-trivial-milliseconds="2"></script>
+
+    <script type="text/javascript">$.each(q, function (i, f) { $(f) })</script>
+    <script>var gaPrefix = 'app';var gaAccountClassic = 'UA-30586-15', gaAccountUniversal = 'UA-30586-16';</script>
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/compiled/app/global/polyfill/polyfill.min.js?h=0B93C80B20190522"></script>
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/compiled/app/global/header/header.min.js?h=0B2F640520190522"></script>
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/cm.min.js?h=73DC336B20190522"></script>
+    
+    
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/createsend.min.js?h=9644F0B220190522"></script>
+    <script type="text/javascript" src="http://js.localcreatesend.com/js/plugins/jquery.shake.js?h=0C955C9D20190522"></script>
+    <script src="auto-complete.js"></script>
+    <script type="text/javascript">
+        var abState = '';
+        var selectedTestType = "";
+        $(CS.Step1.ready({
+            campaignsHideStep1AuthWarning: true,
+            hasAuthenticatedDomain: false,
+            freeWebmailAddresses: 'gmail.;googlemail.;yahoo.;aol.;yahoogroups.;bk.ru;cs.com;dsl.pipex.co.uk;inbox.ru;inwind.it;iol.it;laposte.net;libero.it;lineone.co.uk;lineone.net;list.ru;mail.ru;mail.ua;screaming.net;talktalk.net;tinyonline.co.uk;tinyworld.co.uk;tiscali.co.uk;ukgateway.net;worldonline.co.uk;y7mail.com;yahoogrupper.dk;yahoogruppi.it;yahooxtra.co.nz;126.com;blueyonder.co.uk;btinternet.com;comcast.net;ezweb.ne.jp;hotmail.com;icloud.com;live.ca;mac.com;mail.de;mchsi.com;me.com;msn.com;netscape.net;ntlworld.com;outlook.com;qq.com;rocketmail.com;seznam.cz;shaw.ca;telus.net;tiscali.it;virgilio.it;yandex.ru;yeah.net;ymail.com',
+            initialSubmitButtonText: 'Next'
+        }));
+        var preload = ["https://contentbuilder-8d9d2335e85f19fd.microservice.deploycreatesend.com/static/js/vendor/require.js?v=Drums","https://contentbuilder-8d9d2335e85f19fd.microservice.deploycreatesend.com/static/js/main.min.js?v=Drums","https://contentbuilder-8d9d2335e85f19fd.microservice.deploycreatesend.com/static/js/angular.min.js?v=Drums","https://contentbuilder-8d9d2335e85f19fd.microservice.deploycreatesend.com/static/js/vendor/jquery-3.3.1.min.js?v=Drums","https://contentbuilder-8d9d2335e85f19fd.microservice.deploycreatesend.com/static/js/vendor/ckeditor_4.5.6/ckeditor.js?v=Drums","https://contentbuilder-8d9d2335e85f19fd.microservice.deploycreatesend.com/static/css/non-global/emailbuilder/main.min.css?h=Drums"];
+
+
+        Sentry.init({
+            dsn: 'https://17689cc8dd31479493a5073d97987096@sentry.io/1319350',
+            maxBreadCrumbs: 50,
+            release: 'US-485'
+        });
+
+        var demo1 = new autoComplete({
+            selector: '.subject-field',
+            minChars: 1,
+            cache: false,
+            source: function(term, suggest){
+                term = term.toLowerCase();                
+                var splitted = term.split(" ");
+                console.log(splitted);
+                if(splitted.length > 1)
+                {
+                    $.getJSON('http://localhost:7000/' + splitted[splitted.length-2] + '/' + splitted[splitted.length-1], function(data){ 
+                        var array = $.map(data, function(value, index) {
+                            return [{index, value}];
+                        });
+                        console.log(array);
+                        console.log(array.slice(0, 5).map(x=>x.index));
+
+                        suggest(array.slice(0, 5).map(x=>x.index)); 
+                    });
+                }
+            },
+            onSelect: function(e, term, item){
+                var splitted = $(".subject-field").val().split(" ");
+                var result= splitted.slice(0, splitted.length-1).join(" ") + " " + term;
+                $(".subject-field").val(result);
+            }
+        });
+    </script>
+
+    
+    
+<script async type="text/javascript" id="mini-profiler" src="/mini-profiler-resources/includes.js?v=xzh7eivxXApAgO8DQxxtlBYUiNtZLU6N3nlMcvyG9UM=" data-version="xzh7eivxXApAgO8DQxxtlBYUiNtZLU6N3nlMcvyG9UM=" data-path="/mini-profiler-resources/" data-current-id="6368dc3c-0392-492d-92b1-32142fa6f9be" data-ids="3a633c0f-2f4b-467b-bc47-b1b5b25d0f1b,ea888ca2-c31a-49c4-bff6-76e98f050d6c,2125bc19-0da4-480d-b0ee-79b74263f9db,7c73d459-a6da-4aaa-96b9-981a6eacccb8,92a52626-2f08-42a6-85cb-57636e9a7632,cbef8235-0341-48eb-aae2-3fd3b23fe945,43225d54-80ad-4bf6-aedf-99caaaa9535b,6368dc3c-0392-492d-92b1-32142fa6f9be" data-position="left" data-trivial="false" data-children="false" data-max-traces="15" data-controls="false" data-authorized="true" data-toggle-shortcut="Alt+P" data-start-hidden="false" data-trivial-milliseconds="2"></script>
+
+
+</body>
+</html>
