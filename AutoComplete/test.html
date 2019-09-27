@@ -60,27 +60,6 @@ analytics.page('Campaigns', 'Campaigns - Define Email Details', {}, { integratio
 >
     <script data-userId="1-996520" data-sessionId="1|357078|128826|0|09260342193001" data-apiKey="bcfcb97ecb" src="http://js.localcreatesend.com/js/sift/SiftTracking1.0.1.js?h=534BEA7620190522" type="text/javascript"></script>
     
-    
-<!-- Google Tag Manager -->
-
-
-<script type="text/javascript" src="http://js.localcreatesend.com/js/cm-gtm.min.js?h=6D2AA99F20190522"></script>
-
-<script>
-    CS.GoogleTagManager.init();
-</script>
-
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-P82FBF');
-</script>
-<!-- End Google Tag Manager -->
-
 
     <script type="text/javascript" src="http://js.localcreatesend.com/js/compiled/app/global/sessiontimeout/sessionTimeoutDetector.min.js?h=978104A020190522"></script>
 
@@ -434,7 +413,9 @@ analytics.page('Campaigns', 'Campaigns - Define Email Details', {}, { integratio
 						<option value="[firstname,fallback=customer]">Insert first name</option>
 						<option value="[lastname,fallback=customer]">Insert last name</option>
 						<option value="[fullname,fallback=customer]">Insert full name</option>
-					</select>
+          </select>
+          <div style="clear: both"></div>
+          <div class="spell-checked-subject-line" style="font-size: 14px; padding-left: 10px; margin-top: 7px"></div>
 				</div>
 			</li>
 
@@ -641,6 +622,95 @@ analytics.page('Campaigns', 'Campaigns - Define Email Details', {}, { integratio
     
 <script async type="text/javascript" id="mini-profiler" src="/mini-profiler-resources/includes.js?v=xzh7eivxXApAgO8DQxxtlBYUiNtZLU6N3nlMcvyG9UM=" data-version="xzh7eivxXApAgO8DQxxtlBYUiNtZLU6N3nlMcvyG9UM=" data-path="/mini-profiler-resources/" data-current-id="6368dc3c-0392-492d-92b1-32142fa6f9be" data-ids="3a633c0f-2f4b-467b-bc47-b1b5b25d0f1b,ea888ca2-c31a-49c4-bff6-76e98f050d6c,2125bc19-0da4-480d-b0ee-79b74263f9db,7c73d459-a6da-4aaa-96b9-981a6eacccb8,92a52626-2f08-42a6-85cb-57636e9a7632,cbef8235-0341-48eb-aae2-3fd3b23fe945,43225d54-80ad-4bf6-aedf-99caaaa9535b,6368dc3c-0392-492d-92b1-32142fa6f9be" data-position="left" data-trivial="false" data-children="false" data-max-traces="15" data-controls="false" data-authorized="true" data-toggle-shortcut="Alt+P" data-start-hidden="false" data-trivial-milliseconds="2"></script>
 
+<style>
+  .spell-error{
+    text-decoration: line-through;
+    color: crimson;
+  }
 
+  .correct-spelling{
+    font-weight: bold;
+    color: green;
+  }
+
+  .tick-mark {
+    margin-left: 3px;
+    display: inline-block;
+    top: 3px;
+    position: relative;
+    margin-right: 3px;
+    cursor: pointer;    
+  }
+</style>
+
+<script>
+  const subjectBox = document.getElementById('Subject');
+  const correctSubjectBox = document.querySelector(".spell-checked-subject-line");
+  const wordDictionary = {};
+  let words = [];
+
+  const tickMark = (index, word, correct) => {
+    return '<img src="tick.png" width="15" class="tick-mark" index="' + index  + '" word="' + escape(word)  + '" correct="' + escape(correct)  + '"/>'
+  };
+  
+  subjectBox.addEventListener('change', (e)=> {
+    const text = e.target.value;
+    words = text.split(' ');
+    checkSpelling();
+  });
+
+    const checkSpelling = ()=>{
+      const correctWords = [];
+    let i;
+
+    for(i = 0; i < words.length; i++){
+      if (wordDictionary[words[i]] !== undefined) {
+        correctWords[i] = wordDictionary[words[i]];
+        renderCorrectSentence(words, correctWords);
+      } else {
+        fetch('http://localhost:5000/' + encodeURIComponent(words[i].trim()) + "?index=" + i)
+        .then(r => r.json())
+        .then(r => {
+          if (r.result.length > 0) {
+            wordDictionary[r.searchTerm] = r.result[0];
+          }
+
+          correctWords[r.index] = r.result.length > 0 ? r.result[0] : r.searchTerm;
+          console.log("Correct:", correctWords);
+
+          renderCorrectSentence(words, correctWords);
+        });
+      }
+    }
+    };
+
+    const renderCorrectSentence = (words, correctWords) => {
+      let correctSubject = '';
+          for(j = 0; j < words.length; j++){
+            if (words[j] === correctWords[j] || correctWords[j] === undefined){
+              correctSubject += words[j] + ' ';
+            } else {
+              correctSubject += '<span class="spell-error">' + words[j] + '</span> <span class="correct-spelling">' + correctWords[j] + '</span>' + tickMark(j, words[j], correctWords[j]);
+            }
+          }
+
+          correctSubjectBox.innerHTML = correctSubject;
+
+          document.querySelectorAll(".tick-mark").forEach(tick=>{
+            tick.addEventListener("click", acceptCorrection);
+          });
+    };
+
+    const acceptCorrection = (e) => {
+      const word = e.target.getAttribute('word');
+      const correct = e.target.getAttribute('correct');
+      const index = parseInt(e.target.getAttribute('index'));
+      words[index] = correct;
+
+      subjectBox.value = words.join(' ');
+      checkSpelling();
+    };
+
+</script>
 </body>
 </html>
