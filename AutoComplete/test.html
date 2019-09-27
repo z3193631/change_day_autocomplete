@@ -391,7 +391,7 @@ analytics.page('Campaigns', 'Campaigns - Define Email Details', {}, { integratio
 
     <div id="regular">
         <div id="campaign-editor">
-<form Id="regular-form" action="/campaigns/regular/step1" method="post" tab="regular,absplit">	<div id="regular-content" style="">
+<form Id="regular-form" method="post" tab="regular,absplit" onsubmit="return false;">	<div id="regular-content" style="">
 
 		<ul class="primary-form">
 
@@ -551,7 +551,7 @@ analytics.page('Campaigns', 'Campaigns - Define Email Details', {}, { integratio
                                 Authentication is recommended by major email providers like Gmail and Yahoo to improve your chance of delivery. <br />
                                     <span>Do you want to set up an authenticated domain?</span>
                             </span>
-                            <button id="submitButton" class="js-noAuthWarnSubmitButton cmds-button cmds-button--primary cmds-button--bridge qa-button-next-step">
+                            <button class="js-noAuthWarnSubmitButton cmds-button cmds-button--primary cmds-button--bridge qa-button-next-step">
                                 <span class="cmds-button__inner">
                                     <span class="cmds-button__text">Next</span>
                                     <svg aria-hidden="true" class="cmds-icon cmds-icon--size-16" fill="currentColor" viewBox="0 0 14 12">
@@ -616,7 +616,7 @@ analytics.page('Campaigns', 'Campaigns - Define Email Details', {}, { integratio
                 term = term.toLowerCase();                
                 var splitted = term.split(" ");
                 console.log(splitted);
-                if(splitted.length > 1)
+                if(splitted.length > 1 && splitted[splitted.length-1] !== '' && splitted[splitted.length-2] !== '')
                 {
                     $.getJSON('http://localhost:7000/' + splitted[splitted.length-2] + '/' + splitted[splitted.length-1], function(data){ 
                         var array = $.map(data, function(value, index) {
